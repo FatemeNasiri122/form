@@ -1,0 +1,298 @@
+@import url("font.css");
+:root {
+    --color-form-background: rgba(255,255,255,0.8);
+    --color-blue: #0959db;
+    --color-green: #20e307;
+    --color-white: #f7faf8;
+    --color-red: #f73105;
+    --color-light-blue: #00c4eb;
+    --color-dark-blue: #09055e;
+    --color-light-gray: #7b878a;
+    --color-light-dark: rgb(232, 240, 254);
+}
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: IRANSans;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: url("../img/background.jpg") no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+.forms{
+    width: 80%;
+    min-height: 70vh;
+    font-size: 1rem;
+}
+.forms__tab-container{
+    display: flex;
+    background-color: var(--color-form-background);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.4rem;
+}
+.forms__tab{
+    width: 50%;
+    padding: 1rem;
+    margin: 0 0.5rem;
+    text-align: center;
+    border-bottom: 0.5rem solid var(--color-light-gray);
+}
+.forms__tab--1{
+    border-bottom: 0.5rem solid var(--color-green);
+}
+.forms__tab--active{
+    border-bottom: 0.5rem solid var(--color-blue);
+}
+.forms__content{
+    display: none;
+    background-color: var(--color-form-background);
+    border-radius: 1rem;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+}
+.forms__content--active{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-between;
+    min-height: 60vh;
+}
+.forms-title{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+}
+.title-text{
+    text-align: center;
+}
+.line{
+    width: 28%;
+    height: 2px;
+    background-color: var(--color-light-gray);
+}
+.form-inline {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0.5rem 0;
+}
+.form-field{
+    display: flex;
+}
+.form-label{
+    font-size: 0.8rem;
+}
+.select-box{
+    display: flex;
+    flex-direction: column;
+}
+.option-container-website , .option-container-person{
+    background-color: var(--color-blue);
+    color: #f5f6fa;
+    width: 100%;
+    display: none;
+    transition: all 0.5s;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
+}
+.option{
+    background-color: var(--color-blue);
+}
+.option:hover{
+    background-color: var(--color-dark-blue);
+}
+.selected-website , .selected-person{
+    order: 0;
+    background-color: var(--color-blue);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #f5f6fa;
+    padding: 12px 24px;
+    position: relative;
+    cursor: pointer;
+}
+.selected-website::after ,.selected-person::after{
+    content: "";
+    background: url("../img/arrow-down.svg") no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    left: 10px;
+    top: 5px;
+    transition: all 0.5s;
+}
+ .option-container-website.active + .selected-website::after, .option-container-person.active + .selected-person::after{
+    transform: rotateX(180deg);
+    top: -6px;
+}
+.option {
+    padding: 12px 24px;
+    cursor: pointer;
+}
+.select-box label{
+    cursor: pointer;
+}
+.radio{
+    display: none;
+}
+.active{
+    display: block;
+}
+.form-field .input{
+    width: 100%;
+    outline: none;
+    padding: 0.5rem;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 1rem;
+    font-family: IRANSans;
+}
+
+.error-border{
+    border: 1px solid var(--color-red) !important;
+}
+::-webkit-input-placeholder {
+    text-align: center;
+}
+:-moz-placeholder { /* Firefox 18- */
+    text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;
+}
+.input:focus {
+    border: 1px solid var(--color-light-blue);
+    background-color: var(--color-light-dark);
+}
+.error{
+    display: block;
+    color: var(--color-red);
+    padding: 0.5rem;
+}
+.btn-container{
+    justify-self: end;
+    align-self: end;
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: IRANSans , sans-serif;
+    color: var(--color-white);
+}
+.btn-next{
+    background-color: var(--color-blue);
+}
+.btn-next img{
+    transform: rotate(0.5turn) translate(100%,-30%);
+}
+.btn-prev img{
+    transform: translate(100%,30%);
+}
+.btn-prev{
+    background-color: var(--color-red);
+}
+.btn:active{
+    animation: buttonClicked 1s linear;
+}
+.forms__content--1 .btn-prev{
+    opacity: 0;
+}
+@media (min-width: 992px) {
+    .form-label-address{
+        width: 15%;
+    }
+    .form-field{
+        width: 33%;
+    }
+    .forms__content--1 .form-inline{
+        height: 12.5rem;
+    }
+    .form-field-address{
+        width: 60%;
+        padding-top: 0.5rem;
+    }
+    .form-field-address-agent{
+        width: 45%;
+    }
+    .form-label{
+        width: 25%;
+        padding-top: 0.5rem;
+        text-align: center;
+    }
+    .input-container{
+        width: 75%;
+    }
+    .input-container-address{
+        width: 95%;
+    }
+    .btn{
+        padding: 0.8rem 2.5rem;
+    }
+}
+@media (max-width: 992px) {
+    .forms{
+        width: 100%;
+    }
+    .forms__tab-container{
+        display: flex;
+        justify-content: center;
+    }
+    .forms__tab{
+        display: none;
+    }
+    .forms__tab--active{
+        width: 100%;
+        display: block;
+    }
+    .line{
+        display: none;
+    }
+    .form-inline input {
+        margin: 10px 0;
+    }
+    .form-inline {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .form-field{
+        flex-direction: column;
+        padding: 0 0.5rem;
+    }
+    .form-label{
+        padding-bottom: 0.5rem;
+    }
+    input{
+        width: 100%;
+    }
+    .btn{
+        padding: 1rem;
+    }
+}
+@keyframes buttonClicked {
+    0%{
+        transform: translateY(2px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

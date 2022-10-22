@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<div class="container">
+    <div class="forms">
+        <div class="forms__tab-container">
+            <div class="forms__tab forms__tab--1 forms__tab--active" data-tab="1">
+                <strong class="text-tab text-tab--1">اطلاعات وبسایت</strong>
+            </div>
+            <div class="forms__tab forms__tab--2" data-tab="2">
+                <strong class="text-tab text-tab--2">اطلاعات هویتی</strong>
+            </div>
+<!--            <div class="forms__tab forms__tab&#45;&#45;3" data-tab="3">-->
+<!--                <strong class="text-tab text-tab&#45;&#45;3"></strong>-->
+<!--            </div>-->
+<!--            <div class="forms__tab forms__tab&#45;&#45;4" data-tab="4">-->
+<!--                <strong class="text-tab text-tab&#45;&#45;4"></strong>-->
+<!--            </div>-->
+        </div>
+        <div class="forms__content forms__content--1 forms__content--active">
+            <div class="forms-title">
+                <div class="line"></div>
+                <p class="title-text">لطفا فرم مربوط به اطلاعات وبسایت را تکمیل نمایید</p>
+                <div class="line"></div>
+            </div>
+            <form class="form-inline form-website-information" action="">
+                <div class="form-field">
+                        <label class="form-label">نوع شخص</label>
+                        <div class="input-container">
+                        <div class="select-box">
+                            <div class="option-container option-container-person">
+                                <div class="option">
+                                    <input type="radio" class="radio" id="real" name="category">
+                                    <label for="real" data-tab="2">حقیقی</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" id="legal" name="category">
+                                    <label for="legal" data-tab="3">حقوقی</label>
+                                </div>
+                            </div>
+                            <div class="selected-person">انتخاب کنید</div>
+                        </div>
+                            <small class="error"></small>
+                    </div>
+
+                </div>
+                <div class="form-field">
+                    <label class="form-label" >نوع وبسایت</label>
+                    <div class="input-container">
+                        <div class="select-box">
+                            <div class="option-container option-container-website">
+                                <div class="option">
+                                    <input type="radio" class="radio" id="shop" name="category">
+                                    <label for="shop">فروشگاهی</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" id="personal" name="category">
+                                    <label for="personal">شخصی</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" class="radio" id="company" name="category">
+                                    <label for="company">شرکتی</label>
+                                </div>
+                            </div>
+                            <div class="selected-website">انتخاب کنید</div>
+                        </div>
+                        <small class="error"></small>
+                    </div>
+                 </div>
+                <div class="form-field">
+                    <label class="form-label" for="domain">دامنه</label>
+                    <div class="input-container">
+                        <input class="input input-domain" type="text" id="domain" placeholder="دامنه" name="domain">
+                        <small class="error"></small>
+                    </div>
+                </div>
+            </form>
+            <div class="btn-container">
+                <button class="btn btn-prev">مرحله قبل</button>
+                <button class="btn btn-next btn-next--first">مرحله بعد <img src="img/icon-arrow.svg" alt="arrow"></button>
+            </div>
+        </div>
+        <div class="forms__content forms__content--2 ">
+            <div class="forms-title">
+                <div class="line"></div>
+                <p class="title-text">لطفا فرم مربوط به اطلاعات هویتی را تکمیل نمایید</p>
+                <div class="line"></div>
+            </div>
+            <form class="form-inline form-identity-information" action="">
+                <div class="form-field">
+                    <label class="form-label" for="name">نام</label>
+                    <div class="input-container">
+                        <input class="input input-name" id="name" type="text" placeholder="نام" name="name">
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="family-name">نام خانوادگی</label>
+                    <div class="input-container">
+                        <input class="input input-family-name" id="family-name" type="text"  placeholder="نام خانوادگی" name="family-name">
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="cellphone">تلفن همراه</label>
+                    <div class="input-container">
+                        <input class="input input-cellphone" type="text" id="cellphone" placeholder="تلفن همراه" name="cellphone">
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="phone">تلفن ثابت</label>
+                    <div class="input-container">
+                        <input class="input input-phone" id="phone" type="text" placeholder="تلفن ثابت" name="phone">
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="organization-level">سمت سازمانی</label>
+                    <div class="input-container">
+                        <input class="input input-organization-level" id="organization-level" type="text"  placeholder="سمت سازمانی" name="organization-level">
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="email">ایمیل</label>
+                    <div class="input-container">
+                        <input class="input input-email" type="email" id="email" placeholder="ایمیل" name="email">
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="form-field form-field-address">
+                    <label class="form-label form-label-address" for="address">آدرس</label>
+                    <div class="input-container">
+                        <input class="input input-address" type="text" id="address" placeholder="آدرس" name="address">
+                        <small class="error"></small>
+                    </div>
+                </div>
+
+            </form>
+            <div class="btn-container">
+                <button class="btn btn-prev btn-prev--second"><img src="img/icon-arrow.svg" alt="arrow">مرحله قبل</button>
+                <button class="btn btn-next btn-next--second">مرحله بعد<img src="img/icon-arrow.svg" alt="arrow"></button>
+            </div>
+        </div>
+        <div class="forms__content forms__content--3 ">
+            <div class="forms-title">
+                <div class="line"></div>
+                <p class="title-text">لطفا فرم مربوط به اطلاعات هویتی را تکمیل نمایید</p>
+                <div class="line"></div>
+            </div>
+            <form class="form-inline form-legal-information" action="">
+                <div class="form-field">
+                    <label class="form-label" for="company-name">نام شرکت</label>
+                    <div class="input-container">
+                        <input class="input input-company-name" id="company-name" type="text"  placeholder="نام شرکت" name="company-name">
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="national-ID">شناسه ملی</label>
+                    <div class="input-container">
+                        <input class="input input-national-ID" type="text" id="national-ID" placeholder="شناسه ملی" name="national-ID">
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="economic-code">کد اقتصادی</label>
+                    <div class="input-container">
+                        <input class="input input-economic-code" type="text" id="economic-code" placeholder="کد اقتصادی" name="economic-code">
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="email-second">ایمیل</label>
+                    <div class="input-container">
+                        <input class="input input-email-second" type="email" id="email-second" placeholder="ایمیل" name="email">
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="form-field form-field-address">
+                    <label class="form-label form-label-address" for="address-second">نشانی</label>
+                    <div class="input-container">
+                        <input class="input input-address-second" type="text" id="address-second" placeholder="نشانی" name="address">
+                        <small class="error"></small>
+                    </div>
+                </div>
+            </form>
+            <div class="forms-title">
+                <div class="line"></div>
+                <p class="title-text">اطلاعات نماینده تام</p>
+                <div class="line"></div>
+            </div>
+            <form class="form-inline" action="">
+                <div class="form-field">
+                    <label class="form-label" for="name-agent">نام</label>
+                    <div class="input-container">
+                        <input class="input input-name-agent" id="name-agent" type="text" placeholder="نام" name="name">
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="family-name-agent">نام خانوادگی</label>
+                    <div class="input-container">
+                        <input class="input input-family-name-agent" id="family-name-agent" type="text"  placeholder="نام خانوادگی" name="family-name">
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="cellphone-agent">تلفن همراه</label>
+                    <div class="input-container">
+                        <input class="input input-cellphone-agent" type="text" id="cellphone-agent" placeholder="تلفن همراه" name="cellphone">
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="phone-agent">تلفن ثابت</label>
+                    <div class="input-container">
+                        <input class="input input-phone-agent" id="phone-agent" type="text" placeholder="تلفن ثابت" name="phone">
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="organization-level-agent">سمت سازمانی</label>
+                    <div class="input-container">
+                        <input class="input input-organization-level-agent" id="organization-level-agent" type="text"  placeholder="سمت سازمانی" name="organization-level">
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label class="form-label " for="email-agent">ایمیل</label>
+                    <div class="input-container">
+                        <input class="input input-email-agent" type="email" id="email-agent" placeholder="ایمیل" name="email">
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="form-field form-field-address">
+                    <label class="form-label form-label-address" for="address-agent">آدرس</label>
+                    <div class="input-container">
+                        <input class="input input-address-agent" type="text" id="address-agent" placeholder="آدرس" name="address">
+                        <small class="error"></small>
+                    </div>
+                </div>
+
+            </form>
+            <div class="btn-container">
+                <button class="btn btn-prev btn-prev--third"><img src="img/icon-arrow.svg" alt="arrow">مرحله قبل</button>
+                <button class="btn btn-next btn-next--third">مرحله بعد<img src="img/icon-arrow.svg" alt="arrow"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="javascript/javascript.js"></script>
+</body>
+</html>
